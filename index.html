@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse — AI That Messages For You</title>
+  <meta name="description" content="Pulse sends first messages, handles replies, follows up, and books calls across iMessage, LinkedIn, Gmail, Slack, and group chats. You choose who it messages and when." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="12" stroke="url(#logoGrad)" stroke-width="2.5"/>
+            <circle cx="14" cy="14" r="5" fill="url(#logoGrad)"/>
+            <circle cx="14" cy="6" r="2.5" fill="#a78bfa"/>
+            <circle cx="14" cy="22" r="2.5" fill="#06b6d4"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28">
+                <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Pulse</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#channels">Channels</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="btn-ghost">Log in</a>
+        <a href="#" class="btn-primary-sm">Get Started Free</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <header id="hero">
+    <div class="hero-bg-effects">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge animate-in">
+        <span class="badge-dot"></span>
+        Now in public beta — join 2,400+ founders
+      </div>
+      <h1 class="animate-in delay-1">
+        Your AI that <span class="gradient-text">messages</span>,<br/>
+        <span class="gradient-text">follows up</span>, and <span class="gradient-text">books calls</span>
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        Pulse sends first messages, handles replies, follows up, and books calls
+        across iMessage, LinkedIn, Gmail, Slack, and group chats.<br/>
+        <strong>You choose who it can message and when it can act.</strong>
+      </p>
+      <div class="hero-ctas animate-in delay-3">
+        <a href="#" class="btn-primary">
+          Start Free Trial
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><polygon points="7.5,6 12,9 7.5,12" fill="currentColor"/></svg>
+          See How It Works
+        </a>
+      </div>
+      <div class="hero-proof animate-in delay-4">
+        <div class="avatar-stack">
+          <div class="avatar" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">K</div>
+          <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #0e7490);">M</div>
+          <div class="avatar" style="background: linear-gradient(135deg, #f472b6, #db2777);">R</div>
+          <div class="avatar" style="background: linear-gradient(135deg, #34d399, #059669);">A</div>
+          <div class="avatar" style="background: linear-gradient(135deg, #fbbf24, #d97706);">J</div>
+        </div>
+        <span>Trusted by founders at <strong>YC, a16z, Sequoia-backed</strong> startups</span>
+      </div>
+    </div>
+
+    <!-- Hero Visual: Floating message mockup -->
+    <div class="hero-visual animate-in delay-3">
+      <div class="chat-window">
+        <div class="chat-header-bar">
+          <div class="chat-header-dots"><span></span><span></span><span></span></div>
+          <span class="chat-header-title">Pulse — Active</span>
+          <span class="status-live"><span class="live-dot"></span> Live</span>
+        </div>
+        <div class="chat-messages">
+          <div class="msg msg-out msg-animate" style="--delay: 0.6s">
+            <div class="msg-platform"><span class="platform-tag linkedin">in</span></div>
+            <div class="msg-bubble">Hey Sarah — saw your talk on PLG at SaaStr. We're building something in that space and I'd love to pick your brain for 15 min. Worth a chat?</div>
+            <div class="msg-meta">Sent via LinkedIn · 2:34 PM</div>
+          </div>
+          <div class="msg msg-in msg-animate" style="--delay: 1.4s">
+            <div class="msg-bubble">Hey! Yeah that sounds great — I'm pretty slammed this week though.</div>
+            <div class="msg-meta">Sarah replied · 4:12 PM</div>
+          </div>
+          <div class="msg msg-out msg-animate" style="--delay: 2.2s">
+            <div class="msg-platform"><span class="platform-tag linkedin">in</span></div>
+            <div class="msg-bubble">Totally get it! How about next Tuesday or Wednesday? I'm flexible after 2pm PT either day 🙌</div>
+            <div class="msg-meta">Auto follow-up · 4:15 PM</div>
+          </div>
+          <div class="msg msg-in msg-animate" style="--delay: 3.0s">
+            <div class="msg-bubble">Wednesday 3pm works! Send me a cal link?</div>
+            <div class="msg-meta">Sarah replied · 5:01 PM</div>
+          </div>
+          <div class="msg msg-system msg-animate" style="--delay: 3.6s">
+            <div class="msg-bubble">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M2 7h12M6 3V1m4 2V1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Meeting booked: Wed 3:00 PM PT · Google Meet link sent
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <span class="typing-indicator"><span></span><span></span><span></span></span>
+          <span>Pulse is composing next message…</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ LOGOS ═══════════════ -->
+  <section id="social-proof" class="section-logos">
+    <div class="container">
+      <p class="logos-label">Works across the platforms you already use</p>
+      <div class="channel-logos">
+        <div class="channel-logo-item">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect width="40" height="40" rx="10" fill="#25D366" fill-opacity="0.15"/><path d="M20 8C13.4 8 8 13.4 8 20c0 2.1.6 4.1 1.6 5.9L8 32l6.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S26.6 8 20 8z" fill="#25D366"/><path d="M25.4 22.7c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5s.2-.3.3-.5 0-.4 0-.5-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6s-.5.1-.8.4c-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z" fill="white"/></svg>
+          <span>iMessage</span>
+        </div>
+        <div class="channel-logo-item">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect width="40" height="40" rx="10" fill="#0A66C2" fill-opacity="0.15"/><path d="M12 16h3v11h-3V16zm1.5-5a1.8 1.8 0 110 3.6 1.8 1.8 0 010-3.6zM17 16h3v1.5c.5-.9 1.7-1.8 3.5-1.8 3.5 0 4.2 2.3 4.2 5.3v6h-3v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V27h-3V16z" fill="#0A66C2"/></svg>
+          <span>LinkedIn</span>
+        </div>
+        <div class="channel-logo-item">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect width="40" height="40" rx="10" fill="#EA4335" fill-opacity="0.15"/><path d="M8 14l12 8 12-8v14a2 2 0 01-2 2H10a2 2 0 01-2-2V14z" fill="#EA4335" opacity="0.3"/><path d="M32 12H8l12 8 12-8z" fill="#EA4335"/></svg>
+          <span>Gmail</span>
+        </div>
+        <div class="channel-logo-item">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect width="40" height="40" rx="10" fill="#4A154B" fill-opacity="0.15"/><path d="M16.5 8a2.5 2.5 0 00-2.5 2.5V19h5V10.5A2.5 2.5 0 0016.5 8zM14 22.5a2.5 2.5 0 105 0V21h-5v1.5zM23.5 32a2.5 2.5 0 002.5-2.5V21h-5v8.5a2.5 2.5 0 002.5 2.5zM26 17.5a2.5 2.5 0 10-5 0V19h5v-1.5zM10.5 19A2.5 2.5 0 008 21.5a2.5 2.5 0 002.5 2.5H12v-5h-1.5zM29.5 19H28v5h1.5a2.5 2.5 0 002.5-2.5A2.5 2.5 0 0029.5 19z" fill="#4A154B"/></svg>
+          <span>Slack</span>
+        </div>
+        <div class="channel-logo-item">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect width="40" height="40" rx="10" fill="#7C3AED" fill-opacity="0.15"/><path d="M12 12h16a2 2 0 012 2v8a2 2 0 01-2 2h-4l-4 4v-4h-8a2 2 0 01-2-2v-8a2 2 0 012-2z" fill="#7C3AED"/><circle cx="16" cy="18" r="1.5" fill="white"/><circle cx="20" cy="18" r="1.5" fill="white"/><circle cx="24" cy="18" r="1.5" fill="white"/></svg>
+          <span>Group Chats</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURES ═══════════════ -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2>Everything a great SDR does.<br/><span class="gradient-text">None of the overhead.</span></h2>
+        <p>Pulse handles the full outreach cycle — from finding the right person to getting them on your calendar.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="--accent: #a78bfa;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 8l10 7 10-7M4 8v12a2 2 0 002 2h16a2 2 0 002-2V8M4 8l10 7 10-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Sends First Messages</h3>
+          <p>Crafts personalized openers that sound like you — not a bot. References their work, mutual connections, and recent activity.</p>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="--accent: #06b6d4;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 10h14M7 14h10M7 18h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="5" width="22" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>Handles Replies</h3>
+          <p>Reads tone, answers questions, and keeps the conversation moving. Escalates to you when it needs a human touch.</p>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="--accent: #f472b6;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M14 8v6l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Follows Up Relentlessly</h3>
+          <p>Never lets a warm lead go cold. Sends perfectly timed follow-ups that feel natural, not spammy.</p>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="--accent: #34d399;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="6" width="20" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M4 11h20M10 6V3m8 3V3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="14" cy="17" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>Books Calls Automatically</h3>
+          <p>Syncs with your calendar, proposes times, sends meeting links, and confirms — all without you lifting a finger.</p>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="--accent: #fbbf24;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3l3.5 7 7.5 1-5.5 5.3L20.8 24 14 20.2 7.2 24l1.3-7.7L3 11l7.5-1L14 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Learns Your Voice</h3>
+          <p>Analyzes your past messages to match your tone, vocabulary, and communication style. Every message sounds authentically you.</p>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="--accent: #f97316;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M12 4h4v4h-4zM4 12h4v4H4zM20 12h4v4h-4zM12 20h4v4h-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 8v4M8 14h4M16 14h4M14 20v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>You Stay in Control</h3>
+          <p>Approve every message as a draft, or set rules for autopilot. Choose who Pulse can contact and set boundaries on when it can act.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CHANNELS ═══════════════ -->
+  <section id="channels" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Channels</span>
+        <h2>One inbox. <span class="gradient-text">Every channel.</span></h2>
+        <p>Pulse unifies your outreach across five channels into a single, intelligent inbox. No more switching tabs.</p>
+      </div>
+      <div class="channels-showcase">
+        <div class="channel-card" data-animate>
+          <div class="channel-icon" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17 2H7a3 3 0 00-3 3v14a3 3 0 003 3h10a3 3 0 003-3V5a3 3 0 00-3-3zm-2 16H9v-1h6v1zm2-3H7V6h10v9z"/></svg>
+          </div>
+          <h3>iMessage</h3>
+          <p>Reach people where they're most responsive. Personal, direct, and impossible to ignore.</p>
+          <div class="channel-stat">98% open rate</div>
+        </div>
+        <div class="channel-card" data-animate>
+          <div class="channel-icon" style="background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M4 8h3v11H4V8zm1.5-5a1.8 1.8 0 110 3.6A1.8 1.8 0 015.5 3zM9 8h3v1.5c.5-.9 1.7-1.8 3.5-1.8 3.5 0 4.2 2.3 4.2 5.3v6h-3v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V19H9V8z"/></svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Connection requests, DMs, and InMails that feel genuine and get responses.</p>
+          <div class="channel-stat">3x reply rate</div>
+        </div>
+        <div class="channel-card" data-animate>
+          <div class="channel-icon" style="background: linear-gradient(135deg, #EA4335 0%, #B31412 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M2 6l10 7 10-7v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm0 0l10 7 10-7"/></svg>
+          </div>
+          <h3>Gmail</h3>
+          <p>Threaded email conversations that avoid spam filters and land in primary inboxes.</p>
+          <div class="channel-stat">65% open rate</div>
+        </div>
+        <div class="channel-card" data-animate>
+          <div class="channel-icon" style="background: linear-gradient(135deg, #4A154B 0%, #2C0E2D 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M9 3a3 3 0 00-3 3v6h6V6a3 3 0 00-3-3zM6 15a3 3 0 106 0v-2H6v2zm9 6a3 3 0 003-3v-6h-6v6a3 3 0 003 3zm3-12a3 3 0 10-6 0v2h6V9z"/></svg>
+          </div>
+          <h3>Slack</h3>
+          <p>Engage in shared Slack communities and direct messages where deals happen fast.</p>
+          <div class="channel-stat">Instant delivery</div>
+        </div>
+        <div class="channel-card" data-animate>
+          <div class="channel-icon" style="background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M4 4h16a2 2 0 012 2v8a2 2 0 01-2 2h-4l-4 4v-4H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+          </div>
+          <h3>Group Chats</h3>
+          <p>Participate in relevant group conversations, chime in naturally, and build visibility.</p>
+          <div class="channel-stat">Multi-threaded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How It Works</span>
+        <h2>Set up in <span class="gradient-text">3 minutes</span>. <br/>Meetings by tomorrow.</h2>
+        <p>No complicated onboarding. Connect your accounts, tell Pulse who to reach, and let it go.</p>
+      </div>
+      <div class="steps-timeline">
+        <div class="step" data-animate>
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Connect Your Channels</h3>
+            <p>Link your LinkedIn, Gmail, iMessage, Slack, and calendar in a few clicks. Pulse syncs instantly.</p>
+          </div>
+          <div class="step-visual">
+            <div class="connect-icons">
+              <div class="connect-dot" style="--c: #0A66C2;"></div>
+              <div class="connect-line"></div>
+              <div class="connect-dot" style="--c: #EA4335;"></div>
+              <div class="connect-line"></div>
+              <div class="connect-dot" style="--c: #25D366;"></div>
+              <div class="connect-line"></div>
+              <div class="connect-dot" style="--c: #4A154B;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="step" data-animate>
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Define Your Audience & Rules</h3>
+            <p>Upload a list or describe your ICP. Set guardrails: who Pulse can message, when it can send, and what needs your approval.</p>
+          </div>
+          <div class="step-visual">
+            <div class="rules-preview">
+              <div class="rule-item"><span class="rule-check">✓</span> Only message VPs and above</div>
+              <div class="rule-item"><span class="rule-check">✓</span> Send between 9am–6pm their time</div>
+              <div class="rule-item"><span class="rule-check">✓</span> Max 3 follow-ups per thread</div>
+            </div>
+          </div>
+        </div>
+        <div class="step" data-animate>
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Watch Meetings Roll In</h3>
+            <p>Pulse starts working immediately — personalized outreach, smart follow-ups, and booked calls appear on your calendar.</p>
+          </div>
+          <div class="step-visual">
+            <div class="calendar-preview">
+              <div class="cal-event"><span class="cal-dot" style="background: #a78bfa;"></span> 10:00 AM — Sarah Chen</div>
+              <div class="cal-event"><span class="cal-dot" style="background: #06b6d4;"></span> 2:30 PM — James Park</div>
+              <div class="cal-event"><span class="cal-dot" style="background: #34d399;"></span> 4:00 PM — Maria Lopez</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTROL ═══════════════ -->
+  <section id="control" class="section section-dark">
+    <div class="container">
+      <div class="control-layout">
+        <div class="control-text" data-animate>
+          <span class="section-tag">Full Control</span>
+          <h2>Autonomous, but <span class="gradient-text">only when you say so.</span></h2>
+          <p>Pulse isn't a black box. You set the rules, approve drafts, and can override anything at any time.</p>
+          <div class="control-features">
+            <div class="control-item">
+              <div class="control-toggle active">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+              </div>
+              <div>
+                <strong>Draft Mode</strong>
+                <span>Review every message before it sends</span>
+              </div>
+            </div>
+            <div class="control-item">
+              <div class="control-toggle">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+              </div>
+              <div>
+                <strong>Autopilot</strong>
+                <span>Let Pulse send within your rules</span>
+              </div>
+            </div>
+            <div class="control-item">
+              <div class="control-toggle active">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+              </div>
+              <div>
+                <strong>Contact Allowlist</strong>
+                <span>Only message approved contacts</span>
+              </div>
+            </div>
+            <div class="control-item">
+              <div class="control-toggle active">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+              </div>
+              <div>
+                <strong>Time Windows</strong>
+                <span>Messages only during business hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control-visual" data-animate>
+          <div class="approval-card">
+            <div class="approval-header">
+              <span class="approval-badge">Pending Approval</span>
+              <span class="approval-count">3 drafts</span>
+            </div>
+            <div class="approval-item">
+              <div class="approval-channel"><span class="platform-tag linkedin">in</span></div>
+              <div class="approval-content">
+                <strong>To: Alex Rivera, CTO @ Acme</strong>
+                <p>"Hey Alex — just read your blog post on scaling microservices. We solve exactly that problem at..."</p>
+              </div>
+              <div class="approval-actions">
+                <button class="approve-btn">✓</button>
+                <button class="reject-btn">✕</button>
+              </div>
+            </div>
+            <div class="approval-item">
+              <div class="approval-channel"><span class="platform-tag gmail">@</span></div>
+              <div class="approval-content">
+                <strong>To: Priya Patel, VP Eng @ Nova</strong>
+                <p>"Hi Priya — following up from last week. Did you get a chance to check out the demo link I..."</p>
+              </div>
+              <div class="approval-actions">
+                <button class="approve-btn">✓</button>
+                <button class="reject-btn">✕</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ STATS ═══════════════ -->
+  <section id="stats" class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-animate>
+          <div class="stat-number" data-count="47">0%</div>
+          <div class="stat-label">Average reply rate</div>
+        </div>
+        <div class="stat-card" data-animate>
+          <div class="stat-number" data-count="12">0x</div>
+          <div class="stat-label">More meetings booked</div>
+        </div>
+        <div class="stat-card" data-animate>
+          <div class="stat-number" data-count="3">0 min</div>
+          <div class="stat-label">Setup time</div>
+        </div>
+        <div class="stat-card" data-animate>
+          <div class="stat-number" data-count="89">0%</div>
+          <div class="stat-label">Time saved on outreach</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+  <section id="testimonials" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2>Founders <span class="gradient-text">love Pulse</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-animate>
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Pulse booked me 14 meetings in its first week. I was doing maybe 2 a week manually before. It's like having a full-time SDR that never sleeps."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">K</div>
+            <div>
+              <strong>Kevin Park</strong>
+              <span>Founder, Streamline (YC W24)</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate>
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The draft mode is genius. I approve messages in 10 seconds and they go out sounding exactly like me. My response rate went from 8% to 42%."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #06b6d4, #0e7490);">M</div>
+            <div>
+              <strong>Maya Johnson</strong>
+              <span>CEO, Bloom AI</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate>
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"I was skeptical about AI outreach but Pulse is different — it actually understands context. It followed up on a thread from 3 weeks ago perfectly."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #f472b6, #db2777);">R</div>
+            <div>
+              <strong>Ryan Torres</strong>
+              <span>Co-founder, Nexus Labs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRICING ═══════════════ -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2>Start free. <span class="gradient-text">Scale when ready.</span></h2>
+        <p>7-day free trial on all plans. No credit card required.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card" data-animate>
+          <div class="pricing-tier">Solo</div>
+          <div class="pricing-price">$49<span>/mo</span></div>
+          <p class="pricing-desc">For solo founders doing their own outreach</p>
+          <ul class="pricing-features">
+            <li>3 connected channels</li>
+            <li>200 messages/month</li>
+            <li>Smart follow-ups</li>
+            <li>Calendar sync</li>
+            <li>Draft approval mode</li>
+          </ul>
+          <a href="#" class="btn-secondary btn-full">Start Free Trial</a>
+        </div>
+        <div class="pricing-card popular" data-animate>
+          <div class="popular-badge">Most Popular</div>
+          <div class="pricing-tier">Pro</div>
+          <div class="pricing-price">$129<span>/mo</span></div>
+          <p class="pricing-desc">For founders ready to scale outbound</p>
+          <ul class="pricing-features">
+            <li>All 5 channels</li>
+            <li>Unlimited messages</li>
+            <li>AI voice training</li>
+            <li>Advanced analytics</li>
+            <li>Autopilot mode</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#" class="btn-primary btn-full">Start Free Trial</a>
+        </div>
+        <div class="pricing-card" data-animate>
+          <div class="pricing-tier">Team</div>
+          <div class="pricing-price">Custom</div>
+          <p class="pricing-desc">For teams with multiple reps</p>
+          <ul class="pricing-features">
+            <li>Everything in Pro</li>
+            <li>Team dashboards</li>
+            <li>Shared contact lists</li>
+            <li>Bring your own API keys</li>
+            <li>SSO & admin controls</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <a href="#" class="btn-secondary btn-full">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section id="final-cta" class="section">
+    <div class="container">
+      <div class="cta-block" data-animate>
+        <div class="cta-bg-effects">
+          <div class="gradient-orb orb-cta-1"></div>
+          <div class="gradient-orb orb-cta-2"></div>
+        </div>
+        <h2>Stop chasing leads.<br/><span class="gradient-text">Let Pulse chase them for you.</span></h2>
+        <p>Join 2,400+ founders who automate their outreach while keeping it personal.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn-primary btn-lg">
+            Get Started Free
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <span class="cta-note">7-day free trial · No credit card required</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="12" stroke="url(#logoGrad2)" stroke-width="2.5"/>
+                <circle cx="14" cy="14" r="5" fill="url(#logoGrad2)"/>
+                <defs>
+                  <linearGradient id="logoGrad2" x1="0" y1="0" x2="28" y2="28">
+                    <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#06b6d4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>Pulse</span>
+          </a>
+          <p>AI-powered outreach that sounds like you. Sends messages, handles replies, follows up, and books calls.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#channels">Channels</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Pulse. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8h3v11H4V8zm1.5-5a1.8 1.8 0 110 3.6A1.8 1.8 0 015.5 3zM9 8h3v1.5c.5-.9 1.7-1.8 3.5-1.8 3.5 0 4.2 2.3 4.2 5.3v6h-3v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V19H9V8z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
